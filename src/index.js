@@ -1,20 +1,6 @@
-//adicionar produtos ao carrinho
-//visualizar os itens escolhidos
-//calcular o subtotal de cada produto
+const prompt = require('prompt-sync')();
 
-/*
 
-function carrinho(){
-    let nomeProduto = prompt("Adicione um produto ao carrinho:");
-    let precoProduto = parseFloat(prompt("Informe o preço do produto"));
-    let quantidadeProduto = parseInt(prompt("Informe a quantidade do produto"));
-    console.log(nomeProduto);
-    console.log("R$ " + precoProduto);
-    console.log(quantidadeProduto);
-}
-
-carrinho ();
-*/
 function carrinho() {
     let produtos = []; // Array para armazenar os produtos no carrinho
 
@@ -26,8 +12,8 @@ function carrinho() {
         if (nomeProduto.toLowerCase() === "fim") {
             break; // Encerra o loop se o usuário digitar 'fim'
         }
-        let precoProduto = parseFloat(prompt("Informe o preço do produto"));
-        let quantidadeProduto = parseInt(prompt("Informe a quantidade do produto"));
+        let precoProduto = parseFloat(prompt("Informe o preço do produto: "));
+        let quantidadeProduto = parseInt(prompt("Informe a quantidade do produto: "));
 
         // Adiciona o produto ao carrinho
         produtos.push({
@@ -41,6 +27,7 @@ function carrinho() {
     console.log("Produtos no carrinho:");
     produtos.forEach(produto => {
         console.log(produto.nome + " - R$ " + produto.preco + " - Quantidade: " + produto.quantidade);
+        console.log("Subtotal: R$ " + produto.preco * produto.quantidade);
     });
 }
 
