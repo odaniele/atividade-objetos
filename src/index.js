@@ -12,3 +12,5 @@ function carrinho(){
 }
 
 carrinho ();
+
+//teste
