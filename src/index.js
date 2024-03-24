@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
 /*const prompt = require('prompt-sync')();
+=======
+const prompt = require('prompt-sync')();
+
+>>>>>>> d4870c7f7c02a6c4b21405a3740084bedb5078cc
 
 function carrinho() {
     let produtos = []; // Array para armazenar os produtos no carrinho
