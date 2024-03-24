@@ -6,9 +6,9 @@ function carrinho() {
     let totalSubtotais = 0; // Variável para armazenar o total dos subtotais
 
     while (true) {
-        let nomeProduto = prompt("Adicione um produto ao carrinho (ou digite 'fim' para encerrar):");
+        let nomeProduto = prompt("Adicione um produto ao carrinho ou digite 'fim' para encerrar: ");
         if (!nomeProduto) {
-            break; // Encerra o loop se o usuário clicar em "Cancelar" ou fechar o prompt
+            break; // Encerra o loop 
         }
         if (nomeProduto.toLowerCase() === "fim") {
             break; // Encerra o loop se o usuário digitar 'fim'
@@ -27,14 +27,14 @@ function carrinho() {
     // Imprime os produtos no carrinho e calcula o total dos subtotais
     console.log("Produtos no carrinho:");
     produtos.forEach(produto => {
-        console.log(produto.nome + " - R$ " + produto.preco + " - Quantidade: " + produto.quantidade);
+        console.log(produto.nome + ": R$" + produto.preco + " - Quantidade: " + produto.quantidade);
         let subtotal = produto.preco * produto.quantidade;
-        console.log("Subtotal: R$ " + subtotal);
+        console.log("Subtotal: R$" + subtotal);
         totalSubtotais += subtotal; // Atualiza o total dos subtotais
     });
 
     // Imprime o total dos subtotais
-    console.log("Total dos subtotais: R$ " + totalSubtotais);
+    console.log("Total da compra: R$" + totalSubtotais.toFixed(2));
 }
 
 carrinho();
